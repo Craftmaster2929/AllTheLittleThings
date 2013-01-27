@@ -305,6 +305,7 @@ public class allthelittlethings extends JavaPlugin {
 		else {
 			sender.sendMessage(ChatColor.BLUE + "Proper use: /murder [target]");
 		}
+	}
 	
 		
 		
