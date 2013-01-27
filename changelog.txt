@@ -1,0 +1,10 @@
+Changelog:
+
+- Added /flyoff command
+- Added /kitinfo for the AutoWalls plugin
+- Added colored text on signs
+- Added /rules command
+- Added /faq command
+- Added /kill command
+   - Able to add reasons
+- Added /staff command
