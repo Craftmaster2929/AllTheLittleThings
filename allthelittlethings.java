@@ -86,12 +86,12 @@ public class allthelittlethings extends JavaPlugin {
 				}
 				if (args[0].equalsIgnoreCase("cactus")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires 15 priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "8 Healing potions, 8 steak");
+					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("builder2")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires 50 priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "");
+					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("elite2")) {
@@ -116,52 +116,52 @@ public class allthelittlethings extends JavaPlugin {
 				}
 				if (args[0].equalsIgnoreCase("firefighter")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires 35 priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "");
+					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("ghost")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires x priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "8 Healing potions, 8 steak");
+					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("ghost2")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires x priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "8 Healing potions, 8 steak");
+					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("ghost3")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires x priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "8 Healing potions, 8 steak");
+					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("miner")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires x priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "8 Healing potions, 8 steak");
+					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("paratrooper")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires x priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "8 Healing potions, 8 steak");
+					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("pyro2")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires x priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "8 Healing potions, 8 steak");
+					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("smelter")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires x priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "8 Healing potions, 8 steak");
+					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("trader")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires x priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "8 Healing potions, 8 steak");
+					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("warrior3")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires x priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "8 Healing potions, 8 steak");
+					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
 					return true;
 				}
 					if (args[0].equalsIgnoreCase("archer")) {
