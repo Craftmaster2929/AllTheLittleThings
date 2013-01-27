@@ -290,6 +290,26 @@ public class allthelittlethings extends JavaPlugin {
 				return true;
 			}
 	}
+	
+	
+	
+	if (cmd.getName().equalsIgnoreCase("cactus") {
+		if (((Player)sender).hasPermission("cactus.op") {
+		ItemStack boots = new ItemStack(Material.LEATHER_BOOTS, 1);
+		ItemStack legs = new ItemStack(Material.LEATHER_LEGGINGS, 1);
+		ItemStack chest = new ItemStack(Material.LEATHER_CHESTPLATE, 1);
+		ItemStack helm = new ItemStack(Material.LEATHER_HELMET, 1);
+		helm = ItemUtils.dyeArmor(helm, 34, 139, 34);
+		chest = ItemUtils.dyeArmor(helm, 34, 139, 34);
+		legs = ItemUtils.dyeArmor(helm, 34, 139, 34);
+		boots = ItemUtils.dyeArmor(helm, 34, 139, 34);
+		boots.addEnchantment(Enchantment.THORNS, 1);
+		legs.addEnchantment(Enchantment.THORNS, 1);
+		chest.addEnchantment(Enchantment.THORNS, 1);
+		helm.addEnchantment(Enchantment.THORNS, 1);
+		contents = new ItemStack[]{ boots, legs, chest, helm };
+		}
+	}
 		
 		
 		
