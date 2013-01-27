@@ -1,0 +1,23 @@
+name: AllTheLittleThings
+main: me.craft.allthelittlethings.allthelittlethings
+author: Craft
+version: 1.0.4
+commands:
+   flyoff:
+      description: Toggles fly off
+      usage: /flyoff
+   kitinfo:
+      description: Gives kit info
+      usage: /kitinfo
+   rules:
+      description: Displays the server rules
+      usage: /rules
+   faq:
+      description: Displays FAQ
+      usage: /faq
+   kill:
+      description: Kill people
+      usage: /kill
+   staff:
+      description: See staff list
+      usage: /staff
