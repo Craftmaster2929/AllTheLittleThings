@@ -12,14 +12,14 @@ import org.bukkit.entity.Player;
 public class allthelittlethings extends JavaPlugin {
 
   private static final Logger log = Logger.getLogger("Minecraft");
-	
+
 	@Override
 	public void onEnable() {
 		Listeners();
 		log.info("[ATLT] AllTheLittleThings has been enabled!");
-		
+
 	}
-	
+
 	public void Listeners() {
 		getServer().getPluginManager().registerEvents(new SignListener(this), this);
 	}
@@ -27,17 +27,17 @@ public class allthelittlethings extends JavaPlugin {
 	public void onDisable() {
 		log.info("[ATLT] AllTheLittleThings has been disabled!");
 	}
-	
+
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-		
-		
+
+
 		if (cmd.getName().equalsIgnoreCase("flyoff") && args.length == 1) {
 			if (sender instanceof Player) {
 			if (((Player)sender).hasPermission("flyoff.op")) {
 
 				Player target = Bukkit.getPlayer(args[0]);
-				
+
 				if (target == null) {
 					sender.sendMessage(ChatColor.RED + args[0] + " is not online!");
 					return true;
@@ -69,11 +69,11 @@ public class allthelittlethings extends JavaPlugin {
 				sender.sendMessage(ChatColor.RED + "Silly Goose!");
 			}
 		}
-		
-		
-		
-		
-		
+
+
+
+
+
 		if (cmd.getName().equalsIgnoreCase("kitinfo")) {
 			if (sender instanceof Player) {
 				if (!(args.length == 1)) {
@@ -96,7 +96,7 @@ public class allthelittlethings extends JavaPlugin {
 				}
 				if (args[0].equalsIgnoreCase("elite2")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires 450 priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "Diamond sword, full set of diamond armor, 64 bottles o' enchanting, 16 bookshelves, anivl, flint and steel, 16 coal");
+					((Player)sender).sendMessage(ChatColor.BLUE + "Diamond sword, full set of diamond armor, 64 bottles o' enchanting, 16 bookshelves, anvil, flint and steel, 16 coal");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("ender")) {
@@ -233,33 +233,33 @@ public class allthelittlethings extends JavaPlugin {
 				sender.sendMessage(ChatColor.BLUE + "Console, you don't need a kit!");
 			}
 		}
-		
-		
-		
-		
-		
+
+
+
+
+
 		if (cmd.getName().equalsIgnoreCase("faq")) {
 			if (sender instanceof Player) {
 				if (args.length == 0) {
 			((Player)sender).sendMessage(ChatColor.GREEN + "FAQ:");
 			((Player)sender).sendMessage(ChatColor.RED + "How do I get priority?");
 			((Player)sender).sendMessage(ChatColor.BLUE + "You get priority from voting and/or donating at mcwalls.enjin.com.");
-			
+
 			((Player)sender).sendMessage(ChatColor.RED + "How do I join a game?");
 			((Player)sender).sendMessage(ChatColor.BLUE + "Join a game by using /join or right clicking a join sign when the countdown to join hits 0.");
-			
+
 			((Player)sender).sendMessage(ChatColor.RED + "How do I play 'The Walls'?");
 			((Player)sender).sendMessage(ChatColor.BLUE + "The Walls is a pvp map in which you have 15 minutes to prepare and gather materials. After that 15 minutes ends, the 4 dividing walls fall and the teams battle.");
-			
+
 			((Player)sender).sendMessage(ChatColor.RED + "Can I be an admin/op? :D");
 			((Player)sender).sendMessage(ChatColor.BLUE + "NO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-			
+
 			((Player)sender).sendMessage(ChatColor.RED + "Who owns this server?");
 			((Player)sender).sendMessage(ChatColor.BLUE + "Craftmaster2929 and JohnnyTk64");
-			
+
 			((Player)sender).sendMessage(ChatColor.RED + "I just got teamkilled, what do I do?????");
 			((Player)sender).sendMessage(ChatColor.BLUE + "Report the player with a screenshot proving they teamkilled in the forums on mcwalls.enjin.com.");
-			
+
 			((Player)sender).sendMessage(ChatColor.RED + "What do I get for donating?");
 			((Player)sender).sendMessage(ChatColor.BLUE + "Donating gets you 2 priority for every 1 dollar. $5-The prefix [$], access to the donator lounge, a name listed in the donator lounge. $10+ - Everything previously listed, plus a custom prefix on request. To donate, just use /buy");
 			return true;
@@ -290,28 +290,170 @@ public class allthelittlethings extends JavaPlugin {
 				return true;
 			}
 	}
-	
-	if (cmd.getName().equalsIgnoreCase("murder") {
-		if (args.length == 1) {
-		if (sender instanceof Player) {
-		if (((Player)sender).hasPermission("murder.op") {
-			Bukkit.getPlayer(args[0]).setHealth(0);
+
+		if (cmd.getName().equalsIgnoreCase("kill")) {
+			if (sender instanceof Player) {
+				if (args.length == 0) {
+					((Player)sender).setHealth(0);
+					((Player)sender).sendMessage(ChatColor.BLUE + "You killed yourself!");
+					return true;
+				}
+				else if (args.length == 1) {
+				if (((Player)sender).hasPermission("flyoff.op")) {
+				Player target = Bukkit.getPlayer(args[0]);
+				target.setHealth(0);
+				target.sendMessage(ChatColor.BLUE + "You were killed.");
+				target.sendMessage(ChatColor.RED + "Reason: No reason provided.");
+				((Player)sender).sendMessage(ChatColor.BLUE + "You have killed " + args[0] + ".");
+				return true;
+			}
+				else {
+					((Player)sender).setHealth(0);
+					return true;
+				}
 		}
+				else if (args.length == 2) {
+					if (((Player)sender).hasPermission("flyoff.op")) {
+						Player target = Bukkit.getPlayer(args[0]);
+						target.setHealth(0);
+						target.sendMessage(ChatColor.BLUE + "You were killed.");
+						target.sendMessage(ChatColor.RED + "Reason: " + args[1]);
+						((Player)sender).sendMessage(ChatColor.BLUE + "You have killed " + args[0] + ".");
+						return true;
+					}
+					else {
+						((Player)sender).setHealth(0);
+						return true;
+					}
+				}
+				else if (args.length == 3) {
+					if (((Player)sender).hasPermission("flyoff.op")) {
+						Player target = Bukkit.getPlayer(args[0]);
+						target.setHealth(0);
+						target.sendMessage(ChatColor.BLUE + "You were killed.");
+						target.sendMessage(ChatColor.RED + "Reason: " + args[1] + " " + args[2]);
+						((Player)sender).sendMessage(ChatColor.BLUE + "You have killed " + args[0] + ".");
+						return true;
+					}
+					else {
+						((Player)sender).setHealth(0);
+						return true;
+					}
+				}
+				else if (args.length == 4) {
+					if (((Player)sender).hasPermission("flyoff.op")) {
+						Player target = Bukkit.getPlayer(args[0]);
+						target.setHealth(0);
+						target.sendMessage(ChatColor.BLUE + "You were killed.");
+						target.sendMessage(ChatColor.RED + "Reason: " + args[1] + " " + args[2] + " " + args[3]);
+						((Player)sender).sendMessage(ChatColor.BLUE + "You have killed " + args[0] + ".");
+						return true;
+					}
+					else {
+						((Player)sender).setHealth(0);
+						return true;
+					}
+				}
+				else if (args.length == 5) {
+					if (((Player)sender).hasPermission("flyoff.op")) {
+						Player target = Bukkit.getPlayer(args[0]);
+						target.setHealth(0);
+						target.sendMessage(ChatColor.BLUE + "You were killed.");
+						target.sendMessage(ChatColor.RED + "Reason: " + args[1] + " " + args[2] + " " + args[3] + " " + args[4]);
+						((Player)sender).sendMessage(ChatColor.BLUE + "You have killed " + args[0] + ".");
+						return true;
+					}
+					else {
+						((Player)sender).setHealth(0);
+						return true;
+					}
+				}
+				else if (args.length == 6) {
+					if (((Player)sender).hasPermission("flyoff.op")) {
+						Player target = Bukkit.getPlayer(args[0]);
+						target.setHealth(0);
+						target.sendMessage(ChatColor.BLUE + "You were killed.");
+						target.sendMessage(ChatColor.RED + "Reason: " + args[1] + " " + args[2] + " " + args[3] + " " + args[4] + " " + args[5]);
+						((Player)sender).sendMessage(ChatColor.BLUE + "You have killed " + args[0] + ".");
+						return true;
+					}
+					else {
+						((Player)sender).setHealth(0);
+						return true;
+					}
+				}
+				else if (args.length == 7) {
+					if (((Player)sender).hasPermission("flyoff.op")) {
+						Player target = Bukkit.getPlayer(args[0]);
+						target.setHealth(0);
+						target.sendMessage(ChatColor.BLUE + "You were killed.");
+						target.sendMessage(ChatColor.RED + "Reason: " + args[1] + " " + args[2] + " " + args[3] + " " + args[4] + " " + args[5] + " " + args[6]);
+						((Player)sender).sendMessage(ChatColor.BLUE + "You have killed " + args[0] + ".");
+						return true;
+					}
+					else {
+						((Player)sender).setHealth(0);
+						return true;
+					}
+				}
+				else if (args.length == 8) {
+					if (((Player)sender).hasPermission("flyoff.op")) {
+						Player target = Bukkit.getPlayer(args[0]);
+						target.setHealth(0);
+						target.sendMessage(ChatColor.BLUE + "You were killed.");
+						target.sendMessage(ChatColor.RED + "Reason: " + args[1] + " " + args[2] + " " + args[3] + " " + args[4] + " " + args[5] + " " + args[6] + " " + args[7]);
+						((Player)sender).sendMessage(ChatColor.BLUE + "You have killed " + args[0] + ".");
+						return true;
+					}
+					else {
+						((Player)sender).setHealth(0);
+						return true;
+					}
+				}
+				else if (args.length == 9) {
+					if (((Player)sender).hasPermission("flyoff.op")) {
+						Player target = Bukkit.getPlayer(args[0]);
+						target.setHealth(0);
+						target.sendMessage(ChatColor.BLUE + "You were killed.");
+						target.sendMessage(ChatColor.RED + "Reason: " + args[1] + " " + args[2] + " " + args[3] + " " + args[4] + " " + args[5] + " " + args[6] + " " + args[7] + " " + args[8]);
+						((Player)sender).sendMessage(ChatColor.BLUE + "You have killed " + args[0] + ".");
+						return true;
+					}
+					else {
+						((Player)sender).setHealth(0);
+						return true;
+					}
+				}
+				else if (args.length == 10) {
+					if (((Player)sender).hasPermission("flyoff.op")) {
+						Player target = Bukkit.getPlayer(args[0]);
+						target.setHealth(0);
+						target.sendMessage(ChatColor.BLUE + "You were killed.");
+						target.sendMessage(ChatColor.RED + "Reason: " + args[1] + " " + args[2] + " " + args[3] + " " + args[4] + " " + args[5] + " " + args[6] + " " + args[7] + " " + args[8] + " " + args[9]);
+						((Player)sender).sendMessage(ChatColor.BLUE + "You have killed " + args[0] + ".");
+						return true;
+					}
+					else {
+						((Player)sender).setHealth(0);
+						return true;
+					}
+				}
 	}
-	else {
-		Bukkit.getPlayer(args[0]).setHealth(0);
-	}
+			else {
+				sender.sendMessage(ChatColor.RED + "Sorry, Console, but you cannot run this command!");
+			}
+}
+		if (cmd.getName().equalsIgnoreCase("staff")) {
+			((Player)sender).sendMessage(ChatColor.RED + "Craftmaster2929 -" + ChatColor.BLUE + " Gender: Male, Classification: Owner, Description: Craftmaster2929 is a friendly person who works hard to make sure the server is running smoothly.");
+			((Player)sender).sendMessage(ChatColor.RED + "JohnnyTk64 -" + ChatColor.BLUE + " Gender: Male, Classification: Owner, Description: JohnnyTk64 is a sketchy fellow, but is nice and fun to talk to; As long as you don't get on his bad side.");
+			((Player)sender).sendMessage(ChatColor.RED + "Rosian123 -" + ChatColor.BLUE + " Gender: Female, Classification: Admin, Description: Rosian123 was the first player to gain the trust of the owners. She is smart and funny, but she doesn't take other people's shit so it is recommened that you listent to her.");
+			((Player)sender).sendMessage(ChatColor.RED + "Swimmer1929 -" + ChatColor.BLUE + " Gender: Male, Classification: Admin, Description: Swimmer1929 is a pig. DO NOT mention bacon around him, he is very sensitive when it comes to people eating his family. He is friendly and funny and brightens up the server with his smile. :3");
 		}
-		else {
-			sender.sendMessage(ChatColor.BLUE + "Proper use: /murder [target]");
-		}
-	}
-	
-		
-		
-		
-		
+
+
+
+
+
 				return false;
 	}
 }
-	
