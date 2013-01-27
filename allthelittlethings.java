@@ -291,6 +291,20 @@ public class allthelittlethings extends JavaPlugin {
 			}
 	}
 	
+	if (cmd.getName().equalsIgnoreCase("murder") {
+		if (args.length == 1) {
+		if (sender instanceof Player) {
+		if (((Player)sender).hasPermission("murder.op") {
+			Bukkit.getPlayer(args[0]).setHealth(0);
+		}
+	}
+	else {
+		Bukkit.getPlayer(args[0]).setHealth(0);
+	}
+		}
+		else {
+			sender.sendMessage(ChatColor.BLUE + "Proper use: /murder [target]");
+		}
 	
 		
 		
