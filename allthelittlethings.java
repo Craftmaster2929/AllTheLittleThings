@@ -448,7 +448,8 @@ public class allthelittlethings extends JavaPlugin {
 			((Player)sender).sendMessage(ChatColor.RED + "JohnnyTk64 -" + ChatColor.BLUE + " Gender: Male, Classification: Owner, Description: JohnnyTk64 is a sketchy fellow, but is nice and fun to talk to; As long as you don't get on his bad side.");
 			((Player)sender).sendMessage(ChatColor.RED + "Rosian123 -" + ChatColor.BLUE + " Gender: Female, Classification: Admin, Description: Rosian123 was the first player to gain the trust of the owners. She is smart and funny, but she doesn't take other people's shit so it is recommened that you listent to her.");
 			((Player)sender).sendMessage(ChatColor.RED + "Swimmer1929 -" + ChatColor.BLUE + " Gender: Male, Classification: Admin, Description: Swimmer1929 is a pig. DO NOT mention bacon around him, he is very sensitive when it comes to people eating his family. He is friendly and funny and brightens up the server with his smile. :3");
-		}
+			return true;
+	}
 
 
 
