@@ -116,22 +116,22 @@ public class allthelittlethings extends JavaPlugin {
 				}
 				if (args[0].equalsIgnoreCase("firefighter")) {
 					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires 35 priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
+					((Player)sender).sendMessage(ChatColor.BLUE + "Leather helmet, leather chestplate - Fire Protection I, stone sword, water bucket, and ladders");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("ghost")) {
-					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires x priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
+					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires 10 priority.");
+					((Player)sender).sendMessage(ChatColor.BLUE + "3 Splash potions of invisibility");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("ghost2")) {
-					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires x priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
+					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires 35 priority.");
+					((Player)sender).sendMessage(ChatColor.BLUE + "6 Splash potions of invisibility");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("ghost3")) {
-					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires x priority.");
-					((Player)sender).sendMessage(ChatColor.BLUE + "[items]");
+					((Player)sender).sendMessage(ChatColor.GREEN + "This kit requires 90 priority.");
+					((Player)sender).sendMessage(ChatColor.BLUE + "5 Splash potions of invisibiltiy, diamond sword - Sharpness I, and flint & steel");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("miner")) {
