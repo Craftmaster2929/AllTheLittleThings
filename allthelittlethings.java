@@ -12,6 +12,10 @@ import org.bukkit.entity.Player;
 public class allthelittlethings extends JavaPlugin {
 
   private static final Logger log = Logger.getLogger("Minecraft");
+  
+  /** 
+   * LBRLBRLBRLBRLBRBLRBLLBRBLLBRLBLBRBLRLLBRLBLRBLRLBRLBLRLBRLBRRRRBLBLLBBLBL
+  **/
 
 	@Override
 	public void onEnable() {
